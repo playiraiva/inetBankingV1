@@ -1,0 +1,83 @@
+package com.inetbanking.utilities;
+
+
+
+//Listener class used to generate Extent reports
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+
+public class ExtentReport extends TestListenerAdapter implements IConstants
+{
+	public static WebDriver driver;
+	private ExtentSparkReporter sparkReporter; // used to add report loc
+	private ExtentReports extent; // used to add info in reports
+	private ExtentTest logger; // used to add pass, fail & skip info in reports
+		
+	public void onStart(ITestContext testContext)
+	{
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(new Date()); //time stamp
+		String repName="Test-Report-"+timeStamp+".html";
+		
+		sparkReporter=new ExtentSparkReporter("./test-output/Execution-report/"+repName); //specify location of the report
+		
+		extent=new ExtentReports();
+		
+		extent.attachReporter(sparkReporter);
+		extent.setSystemInfo("Host name","localhost");
+		extent.setSystemInfo("Environemnt","QA");
+		extent.setSystemInfo("user","vinayak");
+		
+		sparkReporter.config().setDocumentTitle("InetBankingV1 Test Project"); // Title of report
+		sparkReporter.config().setReportName("Test Automation Report"); // name of the report
+		sparkReporter.config().setTheme(Theme.DARK);
+	}
+	
+	public void onTestSuccess(ITestResult tr)
+	{
+		logger=extent.createTest(tr.getName()); // create new entry in the report
+		logger.log(Status.PASS,MarkupHelper.createLabel(tr.getName(),ExtentColor.GREEN)); // send the passed information to the report with GREEN color highlighted
+		
+	}
+	
+	public void onTestFailure(ITestResult result)
+	{
+		logger=extent.createTest(result.getName()); // create new entry in the report
+		logger.log(Status.FAIL,MarkupHelper.createLabel(result.getName(),ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
+		
+		String testCaseName = result.getName();
+		String filePath = IConstants.sshotPath+testCaseName+".png";
+		try {
+			logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(filePath));
+			} 
+		catch (Exception e) 
+				{
+				e.printStackTrace();
+				}
+	}
+		
+	
+	public void onTestSkipped(ITestResult tr)
+	{
+		logger=extent.createTest(tr.getName()); // create new entry in the report
+		logger.log(Status.SKIP,MarkupHelper.createLabel(tr.getName(),ExtentColor.ORANGE));// send the skipped information to the report with ORANGE color highlighted
+	}
+	
+	public void onFinish(ITestContext testContext)
+	{
+		extent.flush();
+	}
+}

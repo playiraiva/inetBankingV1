@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-03-10T12:14:59 IST" name="inetBankingV1" finished-at="2021-03-10T12:15:32 IST" duration-ms="33225">
+    <groups>
+    </groups>
+    <test started-at="2021-03-10T12:14:59 IST" name="BankingApp ChromeTest" finished-at="2021-03-10T12:15:32 IST" duration-ms="33225">
+      <class name="com.inetbanking.testcases.TC_DeleteCustTest_006">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:14:59 IST" name="setup" finished-at="2021-03-10T12:15:06 IST" duration-ms="6848" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:06 IST" name="login" finished-at="2021-03-10T12:15:09 IST" duration-ms="2795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="endResult(org.testng.ITestResult)[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:09 IST" name="endResult" finished-at="2021-03-10T12:15:09 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=TC_DeleteCustTest_006.login()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endResult -->
+        <test-method signature="addCust()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:09 IST" name="addCust" finished-at="2021-03-10T12:15:15 IST" depends-on-methods="com.inetbanking.testcases.TC_DeleteCustTest_006.login" duration-ms="6386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCust -->
+        <test-method is-config="true" signature="endResult(org.testng.ITestResult)[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:15 IST" name="endResult" finished-at="2021-03-10T12:15:15 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCust status=SUCCESS method=TC_DeleteCustTest_006.addCust()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endResult -->
+        <test-method signature="editCust()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:15 IST" name="editCust" finished-at="2021-03-10T12:15:20 IST" depends-on-methods="com.inetbanking.testcases.TC_DeleteCustTest_006.addCust, com.inetbanking.testcases.TC_DeleteCustTest_006.login" duration-ms="4588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editCust -->
+        <test-method is-config="true" signature="endResult(org.testng.ITestResult)[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:20 IST" name="endResult" finished-at="2021-03-10T12:15:20 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=editCust status=SUCCESS method=TC_DeleteCustTest_006.editCust()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endResult -->
+        <test-method signature="deleteCust()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:20 IST" name="deleteCust" finished-at="2021-03-10T12:15:26 IST" depends-on-methods="com.inetbanking.testcases.TC_DeleteCustTest_006.addCust, com.inetbanking.testcases.TC_DeleteCustTest_006.editCust, com.inetbanking.testcases.TC_DeleteCustTest_006.login" duration-ms="5762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCust -->
+        <test-method is-config="true" signature="endResult(org.testng.ITestResult)[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:26 IST" name="endResult" finished-at="2021-03-10T12:15:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteCust status=SUCCESS method=TC_DeleteCustTest_006.deleteCust()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endResult -->
+        <test-method signature="logout()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:26 IST" name="logout" finished-at="2021-03-10T12:15:28 IST" depends-on-methods="com.inetbanking.testcases.TC_DeleteCustTest_006.addCust, com.inetbanking.testcases.TC_DeleteCustTest_006.editCust, com.inetbanking.testcases.TC_DeleteCustTest_006.deleteCust, com.inetbanking.testcases.TC_DeleteCustTest_006.login" duration-ms="2055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="endResult(org.testng.ITestResult)[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:28 IST" name="endResult" finished-at="2021-03-10T12:15:28 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logout status=SUCCESS method=TC_DeleteCustTest_006.logout()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endResult -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.inetbanking.testcases.TC_DeleteCustTest_006@5b239d7d]" started-at="2021-03-10T12:15:28 IST" name="teardown" finished-at="2021-03-10T12:15:32 IST" duration-ms="4121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.inetbanking.testcases.TC_DeleteCustTest_006 -->
+    </test> <!-- BankingApp ChromeTest -->
+  </suite> <!-- inetBankingV1 -->
+</testng-results>
