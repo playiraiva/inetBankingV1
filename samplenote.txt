@@ -1,4 +1,3 @@
 This is a sample note to test git pull.
 This is a sample note to test git pull.
-This is a sample note to test git pull.
 
