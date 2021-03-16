@@ -62,7 +62,6 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 		String filePath = "C:\\Users\\vinayak\\Downloads\\Selenium\\HybridFramework\\inetBankingV1\\screenshots\\"+IConstants.timeStamp+testCaseName+".png";
 		try {
 			logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(filePath));
-			System.out.println(filePath);
 			} 
 		catch (Exception e) 
 				{
