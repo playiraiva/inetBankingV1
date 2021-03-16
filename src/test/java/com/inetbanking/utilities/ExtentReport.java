@@ -4,9 +4,6 @@ package com.inetbanking.utilities;
 
 //Listener class used to generate Extent reports
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -27,10 +24,10 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 	private ExtentReports extent; // used to add info in reports
 	private ExtentTest logger; // used to add pass, fail & skip info in reports
 		
-	public void onStart(ITestContext testContext)
+	public void onStart(ITestResult tr)
 	{
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(new Date()); //time stamp
-		String repName="Test-Report-"+timeStamp+".html";
+		//String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(new Date()); //time stamp
+		String repName="Test-Report-"/*+timeStamp+*/+tr.getTestName()+".html";
 		
 		sparkReporter=new ExtentSparkReporter("./test-output/Execution-report/"+repName); //specify location of the report
 		

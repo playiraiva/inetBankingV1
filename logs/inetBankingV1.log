@@ -21752,3 +21752,12 @@
 2021-03-16 13:02:47,283 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
 2021-03-16 13:02:47,284 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
 2021-03-16 13:02:47,284 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/vinayak/.m2/repository/com/aventstack/extentreports/5.0.6/extentreports-5.0.6.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
+2021-03-16 21:32:59,258  INFO [main] TC_LoginTest_001:55 - Url opened on edge Browser
+2021-03-16 21:33:05,335  INFO [main] TC_LoginTest_001:38 - Login failed
+2021-03-16 21:33:10,846  INFO [main] TC_LoginTest_001:107 - window closed
+2021-03-16 21:34:44,432  INFO [main] TC_LoginTest_001:55 - Url opened on edge Browser
+2021-03-16 21:34:50,248  INFO [main] TC_LoginTest_001:38 - Login failed
+2021-03-16 21:34:56,191  INFO [main] TC_LoginTest_001:107 - window closed
+2021-03-16 21:36:13,098  INFO [main] TC_LoginTest_001:55 - Url opened on edge Browser
+2021-03-16 21:36:19,071  INFO [main] TC_LoginTest_001:38 - Login failed
+2021-03-16 21:36:24,289  INFO [main] TC_LoginTest_001:107 - window closed
