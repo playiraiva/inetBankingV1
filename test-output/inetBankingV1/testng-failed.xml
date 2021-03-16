@@ -11,7 +11,7 @@
         <methods>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0 2 4"/>
           <include name="endResult"/>
         </methods>
       </class> <!-- com.inetbanking.testcases.TC_LoginTest_002 -->
