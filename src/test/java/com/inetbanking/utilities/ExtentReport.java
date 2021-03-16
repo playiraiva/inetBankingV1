@@ -59,9 +59,10 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 		logger.log(Status.FAIL,MarkupHelper.createLabel(result.getName(),ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
 		
 		String testCaseName = result.getName();
-		String filePath = IConstants.sshotPath+testCaseName+".png";
+		String filePath = "C:\\Users\\vinayak\\Downloads\\Selenium\\HybridFramework\\inetBankingV1\\screenshots\\"+IConstants.timeStamp+testCaseName+".png";
 		try {
 			logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(filePath));
+			System.out.println(filePath);
 			} 
 		catch (Exception e) 
 				{

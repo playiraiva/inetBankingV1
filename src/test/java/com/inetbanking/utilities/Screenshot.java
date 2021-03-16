@@ -11,6 +11,7 @@ public class Screenshot implements IConstants{
 
 	public static String getImage(WebDriver driver, String testCaseName) {
 		String filePath = IConstants.sshotPath+testCaseName+".png";
+		System.out.println(filePath +"====Screenshot");
 		
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		
