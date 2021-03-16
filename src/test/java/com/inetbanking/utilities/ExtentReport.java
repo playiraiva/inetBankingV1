@@ -24,10 +24,9 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 	private ExtentReports extent; // used to add info in reports
 	private ExtentTest logger; // used to add pass, fail & skip info in reports
 		
-	public void onStart(ITestResult tr)
+	public void onStart(ITestContext testContext)
 	{
-		//String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(new Date()); //time stamp
-		String repName="Test-Report-"/*+timeStamp+*/+tr.getTestName()+".html";
+		String repName="Test-Report.html";
 		
 		sparkReporter=new ExtentSparkReporter("./test-output/Execution-report/"+repName); //specify location of the report
 		
