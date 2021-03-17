@@ -1,6 +1,7 @@
 package com.inetbanking.utilities;
 
-
+import java.io.FileReader;
+import java.util.Properties;
 
 //Listener class used to generate Extent reports
 
@@ -49,13 +50,33 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 		
 	}
 	
+	public String readProperties(String name) {
+		String fName = null;
+      try {
+    	  FileReader reader=new FileReader("./resources/test.properties");
+          Properties pro=new Properties();
+          pro.load(reader);
+          fName = pro.getProperty(name);
+          return    pro.getProperty(name);
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+      return fName;
+	}
+	
 	public void onTestFailure(ITestResult result)
 	{
 		logger=extent.createTest(result.getName()); // create new entry in the report
 		logger.log(Status.FAIL,MarkupHelper.createLabel(result.getName(),ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
 		
 		String testCaseName = result.getName();
-		String filePath = "C:\\Users\\vinayak\\Downloads\\Selenium\\HybridFramework\\inetBankingV1\\screenshots\\"+IConstants.timeStamp+testCaseName+".png";
+		String filePath;
+		if (readProperties("env").equalsIgnoreCase("local")) {
+			filePath = readProperties("localReportPath")+IConstants.timeStamp+testCaseName+".png";
+		} else {
+			filePath = readProperties("remoteReportPath")+IConstants.timeStamp+testCaseName+".png";
+		}
+	
 		try {
 			logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(filePath));
 			} 
@@ -76,4 +97,5 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 	{
 		extent.flush();
 	}
+	
 }
