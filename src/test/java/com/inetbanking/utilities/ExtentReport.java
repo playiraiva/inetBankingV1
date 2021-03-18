@@ -78,7 +78,7 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 		}
 	
 		try {
-			logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(filePath));
+			logger.fail("Please find Screenshot:" + logger.addScreenCaptureFromPath(filePath));
 			} 
 		catch (Exception e) 
 				{
