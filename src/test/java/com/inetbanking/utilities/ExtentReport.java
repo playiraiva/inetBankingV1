@@ -32,8 +32,9 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 		sparkReporter=new ExtentSparkReporter("./test-output/Execution-report/"+repName); //specify location of the report
 		
 		extent=new ExtentReports();
-		
+        
 		extent.attachReporter(sparkReporter);
+		extent.setReportUsesManualConfiguration(true);
 		extent.setSystemInfo("Host name","localhost");
 		extent.setSystemInfo("Environemnt","QA");
 		extent.setSystemInfo("user","vinayak");
