@@ -70,7 +70,7 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 		logger.log(Status.FAIL,MarkupHelper.createLabel(result.getName(),ExtentColor.RED)); // send the passed information to the report with GREEN color highlighted
 		
 		String testCaseName = result.getName();
-		String filePath;
+		String filePath = null;
 		if (readProperties("env").equalsIgnoreCase("local")) {
 			filePath = readProperties("localReportPath")+IConstants.timeStamp+testCaseName+".png";
 		} else {
@@ -79,6 +79,7 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 	
 		try {
 			logger.fail("Please find Screenshot:" + logger.addScreenCaptureFromPath(filePath));
+			System.out.println(filePath);
 			} 
 		catch (Exception e) 
 				{
