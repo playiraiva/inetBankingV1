@@ -1,6 +1,9 @@
 package com.inetbanking.testcases;
 
+import static org.testng.Assert.fail;
+
 import org.apache.commons.lang3.RandomStringUtils;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.inetbanking.pageobjects.DeleteCustPage;
@@ -89,5 +92,6 @@ public class TC_DeleteCustTest_006 extends BaseTest{
 		lo = new LogoutPage(driver);
 		lo.logoutBtn();
 		logger.info("Logout Successfull");
+		Assert.fail("Demo Logout Fail");
 	}
 }
