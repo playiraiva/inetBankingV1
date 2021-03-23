@@ -74,8 +74,13 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 		String filePath = null;
 		if (readProperties("env").equalsIgnoreCase("local")) {
 			filePath = readProperties("localReportPath")+IConstants.timeStamp+testCaseName+".png";
-		} else {
-			filePath = readProperties("remoteReportPath")+IConstants.timeStamp+testCaseName+".png";
+		} 
+		else if (readProperties("env").equalsIgnoreCase("remoteWar")) {
+			filePath = readProperties("remoteWarReportPath")+IConstants.timeStamp+testCaseName+".png";
+		} 
+		else
+		{
+			filePath = readProperties("remoteExeReportPath")+IConstants.timeStamp+testCaseName+".png";
 		}
 	
 		try {
