@@ -76,12 +76,10 @@ public class ExtentReport extends TestListenerAdapter implements IConstants
 			filePath = readProperties("localReportPath")+IConstants.timeStamp+testCaseName+".png";
 		} else {
 			filePath = readProperties("remoteReportPath")+IConstants.timeStamp+testCaseName+".png";
-			System.out.println(filePath);
 		}
 	
 		try {
 			logger.fail("Please find Screenshot:" + logger.addScreenCaptureFromPath(filePath));
-			System.out.println(filePath);
 			} 
 		catch (Exception e) 
 				{

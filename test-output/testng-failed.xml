@@ -7,14 +7,18 @@
   <test thread-count="5" name="BankingApp ChromeTest(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.inetbanking.testcases.TC_LoginTest_002">
+      <class name="com.inetbanking.testcases.TC_DeleteCustTest_006">
         <methods>
+          <include name="addCust"/>
+          <include name="login"/>
+          <include name="logout"/>
           <include name="teardown"/>
+          <include name="editCust"/>
           <include name="setup"/>
-          <include name="login" invocation-numbers="0 2 4"/>
+          <include name="deleteCust"/>
           <include name="endResult"/>
         </methods>
-      </class> <!-- com.inetbanking.testcases.TC_LoginTest_002 -->
+      </class> <!-- com.inetbanking.testcases.TC_DeleteCustTest_006 -->
     </classes>
   </test> <!-- BankingApp ChromeTest(failed) -->
 </suite> <!-- Failed suite [inetBankingV1] -->

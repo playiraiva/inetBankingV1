@@ -6,21 +6,25 @@
 	<listeners>
 		<listener class-name="com.inetbanking.utilities.ExtentReport" />
 	</listeners>
+	
   <test name="BankingApp ChromeTest">
   
   <parameter name="browser" value="edge" />
-  
-    <classes>
-    
-      <!-- <class name="com.inetbanking.testcases.TC_LoginTest_001"/> -->
-      <class name="com.inetbanking.testcases.TC_LoginTest_002"/>
-      <!-- <class name="com.inetbanking.testcases.TC_NewCustTest_003"/> -->
-      <!-- <class name="com.inetbanking.testcases.TC_NewCustTest_004"/> -->
-      <!-- <class name="com.inetbanking.testcases.TC_EditCustTest_005"/> -->
-      <!-- <class name="com.inetbanking.testcases.TC_DeleteCustTest_006" /> -->
-      
-    </classes>
-    
+
+  	<classes>
+  		<!-- <class name="com.inetbanking.testcases.TC_LoginTest_001" /> -->
+
+  		<!-- <class name="com.inetbanking.testcases.TC_LoginTest_002" /> -->
+
+  		<!-- <class name="com.inetbanking.testcases.TC_NewCustTest_003" /> -->
+
+  		<!-- <class name="com.inetbanking.testcases.TC_NewCustTest_004" /> -->
+
+  		<!-- <class name="com.inetbanking.testcases.TC_EditCustTest_005" /> -->
+
+  		<class name="com.inetbanking.testcases.TC_DeleteCustTest_006" />
+  	</classes>
+
   </test> 
   
 </suite> 
